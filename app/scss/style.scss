@@ -1,0 +1,428 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "global";
+@import "media";
+.header {
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 10;
+	padding: 15px 0;
+	background-color: #000;
+	border-bottom: 1px solid #333333;
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+.menu {
+	&__list {
+		display: flex;
+	}
+	&__list-item + .menu__list-item {
+		margin-left: 25px;
+	}
+	&__list-link {
+		@extend %SourceBold;
+		color: $default;
+		padding: 0 2px 35px;
+		font-size: 13px;
+		letter-spacing: 0.02em;
+		line-height: 29px;
+		transition: all 0.3s;
+		&:hover {
+			color: #fff;
+			border-bottom: 1px solid $accent;
+		}
+	}
+}
+
+.top-slider {
+	background-image: url("../images/slider/top-slider/4.png"), url("../images/background/main-bg.jpg");
+	background-repeat: no-repeat, no-repeat;
+	background-position: right 86px, center;
+	background-size: contain, cover;
+	height: 100vh;
+	&__inner {
+		padding-top: 220px;
+	}
+	&__item {
+		@extend %FugazOne-400;
+		max-width: 710px;
+		padding: 0 5px;
+	}
+	&__headline {
+		text-transform: uppercase;
+		font-size: 75px;
+		line-height: 65px;
+		color: #fff;
+		margin-bottom: 25px;
+		span {
+			color: $accent;
+		}
+	}
+	&__text {
+		font-size: 25px;
+		line-height: 90px;
+		color: #fff;
+	}
+}
+
+// .slick-dots .slick-active button {
+// 	opacity: 1;
+// 	width: 10px;
+// 	height: 10px;
+// 	transform: translateY(-2px);
+// }
+
+.slick-prev,
+.slick-next {
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	top: 60%;
+	opacity: 0.302;
+	background-color: #fff;
+	padding: 15px 28px;
+}
+
+.slick-prev {
+	left: -90px;
+}
+
+.slick-next {
+	right: -90px;
+}
+
+.experience {
+	background-color: #181a1f;
+	&__box {
+		background-image: url("../images/124.png");
+		background-repeat: no-repeat;
+		background-position: right bottom;
+
+		position: relative;
+		padding: 170px 0 90px;
+	}
+	&__inner {
+		max-width: 510px;
+	}
+	&__title {
+		margin-bottom: 70px;
+	}
+	&__description {
+		@extend %FugazOne-400;
+		font-size: 17px;
+		line-height: 29px;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		margin-bottom: 40px;
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 27px;
+		letter-spacing: 0.02em;
+		margin-bottom: 75px;
+	}
+	&__card {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 65px;
+	}
+	&__card-item {
+		border: 1px solid $default;
+		background-color: #1e2026;
+		transition: all 0.3s;
+		&:hover {
+			background-color: #181a1f;
+			box-shadow: 0px 10px 25px 0px rgba(208, 225, 228, 0.3);
+			.experience__card-text {
+				color: $default;
+			}
+			svg {
+				path {
+					fill: $default;
+				}
+			}
+		}
+	}
+
+	&__inner-link {
+		padding: 40px 25px 60px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__card-text {
+		margin-top: 15px;
+		color: $accent;
+	}
+}
+.box-services {
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: -95px;
+	display: flex;
+	justify-content: space-between;
+
+	&__item {
+		position: relative;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		display: flex;
+		justify-content: center;
+		flex-basis: 388px;
+		padding: 30px 10px;
+		transition: all 0.3s;
+		&:hover {
+			.box-services__wrapper--hover {
+				transition: all 0.5s;
+				opacity: 0;
+			}
+		}
+	}
+	&__wrapper--hover {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #c43e3f;
+		opacity: 0.5;
+	}
+	&__link {
+		position: relative;
+		padding-top: 55px;
+		@extend %SourceBold;
+		text-transform: uppercase;
+		font-size: 16px;
+		color: #fff;
+		line-height: 65px;
+		letter-spacing: 0.04em;
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 55px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-image: url("../images/icons/gym.png");
+			background-repeat: no-repeat;
+			width: 62px;
+			height: 30px;
+		}
+	}
+	&__link--training::before {
+		background-image: url("../images/icons/training.png");
+		width: 45px;
+		height: 55px;
+	}
+	&__link--students::before {
+		background-image: url("../images/icons/students.png");
+		width: 50px;
+		height: 50px;
+	}
+}
+.programmes {
+	background-color: #20232a;
+	padding: 55px 0 75px;
+	&__title {
+		text-align: center;
+		@extend %FugazOne-400;
+		font-size: 162px;
+		letter-spacing: 0.04em;
+		color: #2b2e35;
+		text-transform: uppercase;
+	}
+	&__items {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-color: #000;
+		max-width: 280px;
+		width: 100%;
+		&:hover {
+			transition: all 0.5s;
+			box-shadow: 0px 10px 25px 0px rgba(255, 251, 252, 0.3);
+			.programmes__btn {
+				display: block;
+			}
+			.programmes__subject {
+				font-size: 20px;
+				line-height: 25px;
+			}
+			.programmes__img {
+				transition: all 0.5s;
+				filter: grayscale(0);
+			}
+		}
+	}
+
+	&__img {
+		filter: grayscale(1);
+		max-height: 550px;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__box {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	&__subject {
+		@extend %FugazOne-400;
+		text-align: center;
+		font-size: 30px;
+		line-height: 29px;
+		padding: 20px 38px;
+		text-transform: uppercase;
+		color: #fff;
+		background-color: #181a1f;
+	}
+	&__btn {
+		@extend %SourceBold;
+		display: inline-block;
+		text-align: center;
+		padding: 15px 38px;
+		font-size: 13px;
+		line-height: 29px;
+		letter-spacing: 0.14em;
+		color: #fff;
+		cursor: pointer;
+		background-color: $accent;
+		width: 100%;
+		display: none;
+	}
+}
+.timetable {
+	// border: 1px solid $default;
+	background: #181a1f;
+	padding: 90px 0;
+
+	&__title {
+		margin-bottom: 75px;
+	}
+	&__filter {
+		text-align: center;
+		width: 100%;
+		border-bottom: 4px solid $accent;
+	}
+	&__filter-btn {
+		padding: 15px 22px;
+		cursor: pointer;
+		background-color: transparent;
+		text-transform: uppercase;
+		border: none;
+		@extend %SourceBlack;
+		color: #fff;
+		&.building--active {
+			background: $accent;
+		}
+	}
+	&__slider {
+		position: relative;
+		text-align: center;
+		background-color: #1e2026;
+	}
+	&__slick-prev,
+	&__slick-next {
+		position: absolute;
+		cursor: pointer;
+		padding: 35px;
+		border: none;
+		background-color: #181a1f;
+		border: 1px solid #404146;
+		border-bottom: none;
+		top: 0;
+		z-index: 1;
+	}
+
+	&__slick-prev {
+		left: 0;
+	}
+	&__slick-next {
+		right: 0;
+	}
+	&__slider-date {
+		@extend %FugazOne-400;
+		text-transform: uppercase;
+		padding: 25px 0;
+		color: #fff;
+		font-size: 19px;
+		line-height: 37px;
+		letter-spacing: 0.04em;
+	}
+	&__time {
+		@extend %SourceBlack;
+		color: $default;
+		font-size: 13px;
+		line-height: 62px;
+	}
+	&__inner-title {
+		@extend %FugazOne-400;
+		text-transform: uppercase;
+		font-size: 20px;
+		line-height: 18px;
+		letter-spacing: 0.04em;
+		color: #fff;
+	}
+	&__timing {
+		@extend %SourceBlack;
+		margin-bottom: 5px;
+		font-size: 13px;
+		color: $accent;
+		margin-bottom: 5px;
+	}
+	&__coach {
+		@extend %SourceBlack;
+		color: $default;
+	}
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+	th:nth-of-type(n + 2) {
+		width: 150px;
+	}
+}
+th {
+	@extend %SourceBlack;
+	text-transform: uppercase;
+	background: #292b31;
+	font-size: 13px;
+	line-height: 65px;
+	letter-spacing: 0.14em;
+	color: $default;
+	&:nth-child(1) {
+		width: 80px;
+	}
+}
+td {
+	background: #1e2026;
+	border: 1px solid #404146;
+	padding: 20px 0;
+}
+tr {
+	border: 1px solid #404146;
+}
+.hidden {
+	opacity: 0;
+	transition: all 0.4s;
+}
+.build--active,
+.yoga--active,
+.boxing--active,
+.karate--active {
+	opacity: 1;
+}
