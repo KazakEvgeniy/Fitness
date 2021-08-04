@@ -110,7 +110,7 @@
 .experience {
 	background-color: #181a1f;
 	&__box {
-		background-image: url("../images/124.png");
+		background-image: url("../images/background/experienceBG.png");
 		background-repeat: no-repeat;
 		background-position: right bottom;
 
@@ -254,6 +254,7 @@
 	}
 	&__item {
 		position: relative;
+		cursor: pointer;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -573,7 +574,7 @@ tr {
 	&__date {
 		@extend %SourceBold;
 		font-size: 14px;
-		line-height: 65px;
+		line-height: 40px;
 		letter-spacing: 0.06em;
 		color: #c0c0c0;
 	}
@@ -582,7 +583,6 @@ tr {
 	z-index: 3;
 	margin: 0 auto;
 	max-width: 1900px;
-	// padding: 120px 15px;
 	background-color: #1f2229;
 	background-image: url("../images/background/conditionbg.jpg");
 	background-repeat: no-repeat;
@@ -826,8 +826,7 @@ tr {
 		}
 	}
 	&__item {
-		// margin-left: 20px;
-		// padding: 0 2px;
+		cursor: pointer;
 		margin-bottom: 100px;
 		max-width: 350px;
 		position: relative;
@@ -980,6 +979,7 @@ tr {
 		justify-content: space-between;
 	}
 	&__item {
+		cursor: pointer;
 		text-align: center;
 		max-width: 360px;
 	}

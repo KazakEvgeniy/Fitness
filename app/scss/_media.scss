@@ -447,7 +447,7 @@
 		}
 	}
 }
-@media (max-height: 420px) {
+@media (max-height: 400px) {
 	.menu {
 		&__list-link {
 			line-height: 17px;
@@ -466,6 +466,9 @@
 			line-height: 50px;
 			font-size: 20px;
 		}
+	}
+	.header {
+		transform: translateY(-200%);
 	}
 }
 @media (max-height: 320px) {
