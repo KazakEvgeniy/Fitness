@@ -1113,6 +1113,7 @@ tr {
 }
 .footer {
 	max-width: 1900px;
+	margin: 0 auto;
 }
 .footer-top {
 	display: flex;
@@ -1120,7 +1121,7 @@ tr {
 
 	&__box {
 		max-width: 50%;
-		padding: 90px 0;
+		padding: 90px 15px;
 		flex-basis: 50%;
 		background-color: #20232a;
 	}
