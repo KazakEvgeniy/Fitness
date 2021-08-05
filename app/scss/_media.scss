@@ -57,7 +57,7 @@
 		}
 	}
 	.app {
-		padding: 50px 0;
+		padding: 50px 0 0;
 		&__img {
 			display: none;
 		}
@@ -71,7 +71,7 @@
 		display: none;
 	}
 	.price {
-		padding: 50px 0;
+		padding: 50px 0 25px;
 		&__inner {
 			flex-direction: column;
 		}
@@ -80,6 +80,9 @@
 		}
 		&__img {
 			width: 100%;
+		}
+		&__box {
+			margin-bottom: 25px;
 		}
 	}
 }
@@ -295,7 +298,7 @@
 		padding: 25px;
 	}
 	.reviews {
-		padding: 50px 0;
+		padding: 100px 0 20px;
 	}
 	.fitness-news {
 		padding: 50px 15px;
@@ -383,8 +386,14 @@
 			flex-direction: column;
 			justify-content: space-between;
 		}
+		&__link {
+			display: block;
+			height: 285px !important;
+			width: 100%;
+		}
 		&__img {
 			max-width: 100%;
+			width: 100%;
 		}
 	}
 	.lesson-content {

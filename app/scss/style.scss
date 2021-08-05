@@ -539,12 +539,14 @@ tr {
 	}
 	&__link {
 		display: block;
-		max-height: 285px;
+		height: 285px;
+		min-width: 285px;
 	}
 	&__img {
 		object-fit: cover;
 		max-width: 285px;
-		height: 100%;
+		width: 100%;
+		height: 285px;
 	}
 	&__title {
 		margin-bottom: 80px;
@@ -1111,6 +1113,7 @@ tr {
 }
 .footer {
 	max-width: 1900px;
+	margin: 0 auto;
 }
 .footer-top {
 	display: flex;
@@ -1118,7 +1121,7 @@ tr {
 
 	&__box {
 		max-width: 50%;
-		padding: 90px 0;
+		padding: 90px 15px;
 		flex-basis: 50%;
 		background-color: #20232a;
 	}
